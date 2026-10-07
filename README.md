@@ -3,7 +3,7 @@
 **A website concept for a premium cosmetic dentistry practice in Chicago's Gold Coast.**
 Designed with Figma AI from a written brief, then built in React and Tailwind CSS with purposeful motion.
 
-[**Live demo**](https://your-deployment-link.vercel.app)
+[**Live demo**](https://calder-dental-demo.vercel.app/)
 
 ![React](https://img.shields.io/badge/React-18-1F6F6B?style=flat-square) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-1F6F6B?style=flat-square) ![Framer Motion](https://img.shields.io/badge/Framer_Motion-11-1F6F6B?style=flat-square) ![Vite](https://img.shields.io/badge/Vite-5-1F6F6B?style=flat-square)
 
