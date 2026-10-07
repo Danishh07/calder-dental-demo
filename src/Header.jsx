@@ -27,16 +27,18 @@ export default function Header() {
       </div>
       <AnimatePresence>
         {open && (
-          <motion.nav id="drawer" aria-label="Mobile" className="fixed inset-x-0 bottom-0 top-[72px] z-20 flex flex-col justify-between bg-porcelain px-5 pb-10 pt-8 md:hidden"
+          <motion.nav id="drawer" aria-label="Mobile" className="fixed inset-x-0 top-[72px] h-[calc(100dvh-72px)] overflow-y-auto z-20 flex flex-col justify-between bg-porcelain px-5 pb-10 pt-8 md:hidden"
             initial={{ opacity: 0, y: -16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -16 }} transition={{ duration: 0.35, ease: EASE }}>
             <ul className="flex flex-col">
               {links.map(([h, l], i) => (
                 <motion.li key={h} className="border-b border-line" initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.08 + i * 0.05, duration: 0.5, ease: EASE }}>
-                  <a href={h} onClick={() => setOpen(false)} className="block py-4 text-[34px] tracking-[-0.03em]">{l}</a>
+                  <a href={h} onClick={() => setOpen(false)} className="block py-4 text-[clamp(28px,8.5vw,34px)] tracking-[-0.03em] whitespace-nowrap">{l}</a>
                 </motion.li>
               ))}
             </ul>
-            <BtnLink p href="#consult" onClick={() => setOpen(false)} className="w-full">Book a consult</BtnLink>
+            <div className="mt-8">
+              <BtnLink p href="#consult" onClick={() => setOpen(false)} className="w-full">Book a consult</BtnLink>
+            </div>
           </motion.nav>
         )}
       </AnimatePresence>
