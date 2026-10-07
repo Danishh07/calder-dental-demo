@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@theme {
+  --color-porcelain: #F3F4F1; --color-graphite: #22262A; --color-mute: #586269;
+  --color-line: #CDD2CF; --color-teal: #1F6F6B;
+  --font-sans: "Schibsted Grotesk", system-ui, sans-serif;
+}
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; color-scheme: light; }
+  body { background: color-mix(in srgb, var(--tint, #F1ECDD) 40%, #F3F4F1); transition: background .9s ease;
+    color: var(--color-graphite); font-family: var(--font-sans); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { font-weight: 400; letter-spacing: -0.03em; line-height: 1.02; }
+  :focus-visible { outline: 2px solid var(--color-teal); outline-offset: 3px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
